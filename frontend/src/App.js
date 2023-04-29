@@ -8,7 +8,13 @@ import Cart from "./pages/Cart"
 import Stationery from './pages/Stationery';
 import Rangoli from './pages/Rangoli';
 import { useState } from 'react';
+import { useEffect } from 'react';
 function App() {
+
+  useEffect(() => {
+    document.title = "SymbiMart";
+  }, []);
+
   const [message, setMessage] = useState(null);
   const [cartItems, setCartItems] = useState(null);
   console.log(cartItems)
